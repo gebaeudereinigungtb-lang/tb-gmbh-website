@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T&B Bau - Badsanierung & Innenausbau Schwalmtal</title>
+<meta name="description" content="T&B Bau - Professionelle Badsanierung, Trockenbau und Innenausbau in Schwalmtal. Qualität, Präzision und Erfahrung.">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: #333;
+overflow-x: hidden;
+}
+
+header {
+background: linear-gradient(135deg, #1c3d5a 0%, #2d5a7b 100%);
+color: white;
+padding: 1.2rem 0;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000;
+box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1400px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+
+.logo-container {
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+.logo-text {
+font-size: 1.6rem;
+font-weight: 700;
+display: flex;
+flex-direction: column;
+line-height: 1.2;
+}
+
+.logo-subtitle {
+font-size: 0.65rem;
+font-weight: 400;
+opacity: 0.95;
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+gap: 2.5rem;
+}
+
+.nav-links a {
+color: white;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s;
+}
+
+.nav-links a:hover {
+color: #ffd54f;
+}
+
+.hero {
+background: linear-gradient(135deg, rgba(28, 61, 90, 0.92), rgba(45, 90, 123, 0.88)), 
+url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1920&q=80');
+background-size: cover;
+background-position: center;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: white;
+margin-top: 80px;
+}
+
+.hero-content h1 {
+font-size: 4rem;
+margin-bottom: 1.5rem;
+font-weight: 700;
+}
+
+.hero-content p {
+font-size: 1.6rem;
+margin-bottom: 2.5rem;
+}
+
+.btn {
+padding: 1.2rem 2.5rem;
+font-size: 1.1rem;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+text-decoration: none;
+transition: all 0.3s;
+font-weight: 600;
+display: inline-block;
+margin: 0.5rem;
+}
+
+.btn-primary {
+background: linear-gradient(135deg, #ffd54f 0%, #ffb300 100%);
+color: #1c3d5a;
+}
+
+.btn-primary:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 25px rgba(255, 213, 79, 0.6);
+}
+
+.btn-secondary {
+background: transparent;
+color: white;
+border: 2px solid white;
+}
+
+.btn-secondary:hover {
+background: white;
+color: #1c3d5a;
+}
+
+.section {
+padding: 5rem 2rem;
+}
+
+.container {
+max-width: 1400px;
+margin: 0 auto;
+}
+
+.section-title {
+text-align: center;
+font-size: 2.8rem;
+margin-bottom: 1rem;
+color: #1c3d5a;
+font-weight: 700;
+}
+
+.section-subtitle {
+text-align: center;
+font-size: 1.3rem;
+color: #666;
+margin-bottom: 4rem;
+}
+
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+}
+
+.gallery-item {
+position: relative;
+overflow: hidden;
+border-radius: 12px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+cursor: pointer;
+transition: all 0.4s;
+}
+
+.gallery-item:hover {
+transform: translateY(-8px);
+box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+width: 100%;
+height: 320px;
+object-fit: cover;
+display: block;
+transition: transform 0.4s;
+}
+
+.gallery-item:hover img {
+transform: scale(1.1);
+}
+
+.gallery-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: linear-gradient(to top, rgba(28, 61, 90, 0.95), transparent);
+padding: 2rem;
+color: white;
+transform: translateY(100%);
+transition: transform 0.4s;
+}
+
+.gallery-item:hover .gallery-overlay {
+transform: translateY(0);
+}
+
+.gallery-overlay h3 {
+font-size: 1.4rem;
+margin-bottom: 0.5rem;
+}
+
+footer {
+background: linear-gradient(135deg, #1c3d5a 0%, #0f2537 100%);
+color: white;
+text-align: center;
+padding: 3rem 2rem;
+}
+
+@media (max-width: 768px) {
+.hero-content h1 {
+font-size: 2.5rem;
+}
+.gallery-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo-container">
+<div class="logo-text">
+T&B Bau
+<span class="logo-subtitle">Trockenbau · Badsanierung · Maler</span>
+</div>
+</div>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#gallery">Galerie</a></li>
+<li><a href="#kontakt">Kontakt</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Ihr Traumbad wird Realität</h1>
+<p>Professionelle Badsanierung & Innenausbau in Schwalmtal</p>
+<div>
+<a href="tel:01727647377" class="btn btn-primary">Jetzt Anrufen: 0172 764 7377</a>
+<a href="#gallery" class="btn btn-secondary">Referenzen Ansehen</a>
+</div>
+</div>
+</section>
+
+<section class="section" id="gallery" style="background: white;">
+<div class="container">
+<h2 class="section-title">Unsere Referenzen</h2>
+<p class="section-subtitle">Hochwertige Badezimmer Renovierungen & SPC Wandpaneele</p>
+<div class="gallery-grid">
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80" alt="Beton SPC Paneele">
+<div class="gallery-overlay">
+<h3>Beton-Optik SPC Paneele</h3>
+<p>Moderne Walk-in Dusche</p>
+</div>
+</div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800&q=80" alt="Anthrazit Bad">
+<div class="gallery-overlay">
+<h3>Anthrazit SPC - Luxus</h3>
+<p>Edle schwarze Akzente</p>
+</div>
+</div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80" alt="Beige Fliesen">
+<div class="gallery-overlay">
+<h3>Beige Fliesen Klassisch</h3>
+<p>Zeitloses Design</p>
+</div>
+</div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&q=80" alt="Graue XXL">
+<div class="gallery-overlay">
+<h3>Graue XXL Großformat</h3>
+<p>Fugenarme Lösung</p>
+</div>
+</div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?w=800&q=80" alt="Dunkle SPC">
+<div class="gallery-overlay">
+<h3>Dunkle SPC Wandpaneele</h3>
+<p>Rahmenlose Dusche</p>
+</div>
+</div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80" alt="Wellness">
+<div class="gallery-overlay">
+<h3>Wellness Badezimmer</h3>
+<p>Spa-Atmosphäre</p>
+</div>
+</div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="XXL Beton">
+<div class="gallery-overlay">
+<h3>Beton XXL Platten</h3>
+<p>Industrial Chic</p>
+</div>
+</div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Grün">
+<div class="gallery-overlay">
+<h3>Natürliche Akzente</h3>
+<p>Frisch & Modern</p>
+</div>
+</div>
+<div class="gallery-item">
+<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80" alt="Beton Industrial">
+<div class="gallery-overlay">
+<h3>Beton-Optik Industrial</h3>
+<p>Minimalistisch</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="kontakt" style="background: linear-gradient(135deg, #1c3d5a 0%, #2d5a7b 100%); color: white;">
+<div class="container">
+<h2 class="section-title" style="color: white;">Kontaktieren Sie Uns</h2>
+<p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Kostenlose Beratung für Ihr Projekt</p>
+<div style="text-align: center; font-size: 1.3rem; max-width: 600px; margin: 3rem auto;">
+<p style="margin-bottom: 2rem;">📍 <strong>Breslauer Str. 22, 41366 Schwalmtal</strong></p>
+<p style="margin-bottom: 2rem;">📞 <a href="tel:01727647377" style="color: #ffd54f; text-decoration: none; font-weight: bold;">0172 764 7377</a></p>
+<p style="margin-bottom: 2rem;">✉️ <a href="mailto:tburduhos@gmail.com" style="color: #ffd54f; text-decoration: none;">tburduhos@gmail.com</a></p>
+<a href="tel:01727647377" class="btn btn-primary" style="font-size: 1.2rem; margin-top: 2rem;">Jetzt Kostenlos Beraten Lassen</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">T&B Bau - Trockenbau · Badsanierung · Maler</p>
+<p>&copy; 2024 T&B Bau. Alle Rechte vorbehalten. | Inhaber: Teodor Burduhos</p>
+</div>
+</footer>
+</body>
+</html>
